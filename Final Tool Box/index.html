@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ToolBox - أدوات مجانية أونلاين</title>
+
+  <meta
+    name="description"
+    content="مجموعة كبيرة من الأدوات المجانية للنصوص والصور والملفات والبرمجة والأمان والحسابات. تعمل مباشرة من المتصفح بدون خادم."
+  >
+
+  <meta name="author" content="Mohammed AL-Salaf">
+
+  <meta
+    name="keywords"
+    content="أدوات مجانية, أدوات أونلاين, ضغط الصور, تحويل الصور, JSON, Base64, SHA256, كلمات مرور, حاسبة"
+  >
+
+  <meta name="theme-color" content="#2563eb">
+
+  <meta property="og:title" content="ToolBox - أدوات مجانية أونلاين">
+  <meta
+    property="og:description"
+    content="أدوات مجانية وسريعة تعمل مباشرة داخل المتصفح."
+  >
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon.png">
+  <link rel="apple-touch-icon" href="images/icon.png">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+  <header class="header">
+
+    <div class="container nav">
+
+      <a href="#home" class="logo" aria-label="ToolBox">
+
+        <span class="logo-icon">
+          <img
+            src="images/icon.png"
+            alt="ToolBox"
+            width="44"
+            height="44"
+          >
+        </span>
+
+        <span class="logo-text">
+          <strong>ToolBox</strong>
+        </span>
+
+      </a>
+
+      <nav id="mainNav">
+
+        <a href="#home">الرئيسية</a>
+        <a href="#tools">الأدوات</a>
+        <a href="#favorites">المفضلة</a>
+        <a href="#recentSection">الأخيرة</a>
+        <a href="#about">حول الموقع</a>
+
+      </nav>
+
+      <div class="header-actions">
+
+        <button
+          id="themeBtn"
+          class="icon-btn"
+          type="button"
+          aria-label="تغيير المظهر"
+          title="تغيير المظهر"
+        >
+          🌙
+        </button>
+
+        <button
+          id="menuBtn"
+          class="icon-btn menu-btn"
+          type="button"
+          aria-label="فتح القائمة"
+          title="القائمة"
+        >
+          ☰
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+    <section id="home" class="hero">
+
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+
+      <div class="container hero-content">
+
+        <div class="hero-badge">
+          <span>⚡</span>
+          أدوات مجانية • سريعة • بدون خادم
+        </div>
+
+        <h1>
+          كل الأدوات التي تحتاجها
+          <span>في مكان واحد</span>
+        </h1>
+
+        <p>
+          مجموعة احترافية من الأدوات للنصوص والصور والملفات
+          والبرمجة والأمان والحسابات، تعمل مباشرة داخل متصفحك.
+        </p>
+
+        <div class="search-box">
+
+          <span class="search-icon">⌕</span>
+
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="ابحث عن أداة... مثل JSON أو ضغط الصور"
+            autocomplete="off"
+            aria-label="البحث عن أداة"
+          >
+
+          <kbd>/</kbd>
+
+        </div>
+
+        <div class="quick-tags">
+
+          <button data-search="JSON">JSON</button>
+          <button data-search="صورة">الصور</button>
+          <button data-search="كلمة مرور">الأمان</button>
+          <button data-search="حاسبة">الحسابات</button>
+
+        </div>
+
+        <div class="stats">
+
+          <div class="stat">
+            <strong id="toolsCount">0</strong>
+            <span>أداة</span>
+          </div>
+
+          <div class="stat">
+            <strong id="favoriteCount">0</strong>
+            <span>مفضلة</span>
+          </div>
+
+          <div class="stat">
+            <strong>100%</strong>
+            <span>داخل المتصفح</span>
+          </div>
+
+          <div class="stat">
+            <strong>0</strong>
+            <span>رفع للسيرفر</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <div class="container">
+
+      <!-- =========================
+           AD SPACE 1
+      ========================== -->
+      <div class="ad-space ad-top" aria-label="مساحة إعلانية">
+        <span>مساحة إعلانية</span>
+      </div>
+
+
+      <!-- =========================
+           TOOLS
+      ========================== -->
+      <section id="tools" class="section">
+
+        <div class="section-heading">
+
+          <div>
+
+            <span class="section-label">
+              مكتبة الأدوات
+            </span>
+
+            <h2>
+              اختر الأداة التي تحتاجها
+            </h2>
+
+            <p class="section-description">
+              أدوات عملية مجانية تعمل مباشرة على جهازك.
+            </p>
+
+          </div>
+
+          <div class="sort-wrapper">
+
+            <label for="sortSelect">
+              ترتيب
+            </label>
+
+            <select id="sortSelect">
+
+              <option value="default">
+                الترتيب الافتراضي
+              </option>
+
+              <option value="name">
+                حسب الاسم
+              </option>
+
+              <option value="usage">
+                الأكثر استخدامًا
+              </option>
+
+              <option value="favorites">
+                المفضلة أولًا
+              </option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="categories"
+          id="categories"
+          role="tablist"
+        >
+
+          <button
+            class="category-btn active"
+            data-category="all"
+            type="button"
+          >
+            الكل
+          </button>
+
+          <button
+            class="category-btn"
+            data-category="text"
+            type="button"
+          >
+            ✍️ النصوص
+          </button>
+
+          <button
+            class="category-btn"
+            data-category="developer"
+            type="button"
+          >
+            💻 البرمجة
+          </button>
+
+          <button
+            class="category-btn"
+            data-category="security"
+            type="button"
+          >
+            🔐 الأمان
+          </button>
+
+          <button
+            class="category-btn"
+            data-category="image"
+            type="button"
+          >
+            🖼️ الصور
+          </button>
+
+          <button
+            class="category-btn"
+            data-category="file"
+            type="button"
+          >
+            📁 الملفات
+          </button>
+
+          <button
+            class="category-btn"
+            data-category="calculator"
+            type="button"
+          >
+            🧮 الحسابات
+          </button>
+
+          <button
+            class="category-btn"
+            data-category="utility"
+            type="button"
+          >
+            🛠️ عامة
+          </button>
+
+        </div>
+
+
+        <div id="resultInfo" class="result-info"></div>
+
+
+        <div id="toolsGrid" class="tools-grid"></div>
+
+
+        <div
+          id="noResults"
+          class="empty-state hidden"
+        >
+
+          <div class="empty-icon">⌕</div>
+
+          <h3>
+            لم يتم العثور على أداة
+          </h3>
+
+          <p>
+            جرّب كلمة بحث مختلفة أو اختر قسمًا آخر.
+          </p>
+
+          <button
+            id="clearSearch"
+            class="btn btn-primary"
+            type="button"
+          >
+            إظهار جميع الأدوات
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           AD SPACE 2
+      ========================== -->
+      <div class="ad-space ad-between" aria-label="مساحة إعلانية">
+        <span>مساحة إعلانية</span>
+      </div>
+
+
+      <!-- =========================
+           FAVORITES
+      ========================== -->
+      <section id="favorites" class="section">
+
+        <div class="section-heading">
+
+          <div>
+
+            <span class="section-label">
+              محفوظاتك
+            </span>
+
+            <h2>
+              الأدوات المفضلة ⭐
+            </h2>
+
+            <p class="section-description">
+              أدواتك التي اخترتها للوصول السريع.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div
+          id="favoritesGrid"
+          class="tools-grid"
+        ></div>
+
+        <div
+          id="emptyFavorites"
+          class="empty-state"
+        >
+
+          <div class="empty-icon">☆</div>
+
+          <h3>
+            لا توجد أدوات مفضلة
+          </h3>
+
+          <p>
+            اضغط على النجمة بجانب أي أداة لإضافتها هنا.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           AD SPACE 3
+      ========================== -->
+      <div class="ad-space ad-between" aria-label="مساحة إعلانية">
+        <span>مساحة إعلانية</span>
+      </div>
+
+
+      <!-- =========================
+           RECENT
+      ========================== -->
+      <section
+        id="recentSection"
+        class="section recent-section hidden"
+      >
+
+        <div class="section-heading">
+
+          <div>
+
+            <span class="section-label">
+              سجل الاستخدام
+            </span>
+
+            <h2>
+              الأدوات المستخدمة مؤخرًا
+            </h2>
+
+          </div>
+
+          <button
+            id="clearRecent"
+            class="small-action"
+            type="button"
+          >
+            مسح السجل
+          </button>
+
+        </div>
+
+        <div
+          id="recentGrid"
+          class="tools-grid"
+        ></div>
+
+      </section>
+
+
+      <!-- =========================
+           AD SPACE 4
+      ========================== -->
+      <div class="ad-space ad-large" aria-label="مساحة إعلانية">
+        <span>مساحة إعلانية</span>
+      </div>
+
+
+      <!-- =========================
+           ABOUT
+      ========================== -->
+      <section
+        id="about"
+        class="section about-section"
+      >
+
+        <div class="about-card">
+
+          <div class="about-icon">
+
+            <img
+              src="images/icon.png"
+              alt="ToolBox"
+              width="90"
+              height="90"
+            >
+
+          </div>
+
+          <div class="about-content">
+
+            <span class="section-label">
+              ToolBox
+            </span>
+
+            <h2>
+              أدواتك اليومية بدون تعقيد
+            </h2>
+
+            <p>
+              ToolBox عبارة عن مجموعة من الأدوات العملية
+              التي تعمل مباشرة في متصفحك. لا تحتاج إلى تثبيت
+              برامج إضافية لمعظم الأدوات، ولا يتم إرسال ملفاتك
+              إلى خادم الموقع.
+            </p>
+
+            <div class="about-points">
+
+              <span>✓ مجاني</span>
+              <span>✓ سريع</span>
+              <span>✓ بدون حساب</span>
+              <span>✓ يعمل على الهاتف</span>
+              <span>✓ يعمل على الكمبيوتر</span>
+              <span>✓ أدوات حقيقية</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           AD SPACE 5
+      ========================== -->
+      <div class="ad-space ad-footer" aria-label="مساحة إعلانية">
+        <span>مساحة إعلانية</span>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="footer">
+
+    <div class="container footer-content">
+
+      <div class="footer-brand">
+
+        <strong>
+
+          <img
+            src="images/icon.png"
+            id="end-icon"
+            alt="ToolBox"
+            width="30"
+            height="30"
+          >
+
+          ToolBox
+
+        </strong>
+
+        <p>
+          أدوات مجانية أونلاين للجميع.
+        </p>
+
+      </div>
+
+      <div class="footer-links">
+
+        <a href="#home">الرئيسية</a>
+        <a href="#tools">الأدوات</a>
+        <a href="#favorites">المفضلة</a>
+        <a href="#about">حول الموقع</a>
+
+      </div>
+
+      <div class="footer-copy">
+
+        <span>
+          © <span id="year"></span> ToolBox
+        </span>
+
+        <small>
+          يعمل مباشرة من المتصفح
+        </small>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       MODAL
+  ========================== -->
+  <div
+    id="toolModal"
+    class="modal"
+    aria-hidden="true"
+  >
+
+    <div
+      class="modal-overlay"
+      id="modalOverlay"
+    ></div>
+
+    <div
+      class="modal-box"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+
+      <div class="modal-header">
+
+        <div class="modal-title-area">
+
+          <div
+            id="modalCategory"
+            class="modal-category"
+          >
+            أداة
+          </div>
+
+          <h2 id="modalTitle">
+            الأداة
+          </h2>
+
+        </div>
+
+        <div class="modal-actions">
+
+          <button
+            id="shareToolBtn"
+            class="modal-icon-btn"
+            type="button"
+            title="مشاركة الأداة"
+            aria-label="مشاركة الأداة"
+          >
+            ↗
+          </button>
+
+          <button
+            id="modalFavoriteBtn"
+            class="modal-icon-btn"
+            type="button"
+            title="المفضلة"
+            aria-label="المفضلة"
+          >
+            ☆
+          </button>
+
+          <button
+            id="closeModal"
+            class="modal-icon-btn close-btn"
+            type="button"
+            title="إغلاق"
+            aria-label="إغلاق"
+          >
+            ×
+          </button>
+
+        </div>
+
+      </div>
+
+      <div
+        id="modalBody"
+        class="modal-body"
+      ></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- TOAST -->
+  <div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+
+  <script src="js/app.js"></script>
+
+</body>
+</html>
